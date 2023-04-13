@@ -31,11 +31,10 @@ class MultiClassLabel(ImageClassificationPipeline):
         return [{"score": score, "label": self.model.config.id2label[_id]} for score, _id in zip(scores, ids)]
 
 
-#folder_path = r'C:\Users\metal\Documents\programming\sonic_image classifier\SonicCharacterClassifier\latest'
-folder_path = r"C:\Users\metal\Documents\programming\sonic_image classifier\SonicCharacterClassifier\best_32_XL"
+folder_path = r"/home/pablo/Downloads/programming/sonic_image classifier/SonicCharacterClassifier/checkpoint-3423"
 file_paths = []
 
-for root, dirs, files in os.walk(r"C:\Users\metal\gallery-dl\aesthetic_test\charlie_train_set"):
+for root, dirs, files in os.walk(r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/datasets/delta_train_set"):
     for file in files:
         if file.endswith('.txt'):
             continue

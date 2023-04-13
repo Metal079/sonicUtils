@@ -1,8 +1,8 @@
 import os
 import shutil
 
-folder_path = r"C:\Users\metal\gallery-dl\deviantart\Tags\whisperthewolf"
-dst_folder = r"C:\Users\metal\gallery-dl\twitter_cleaned"
+folder_path = r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/datasets/delta_train_set"
+# dst_folder = r"C:\Users\metal\gallery-dl\twitter_cleaned"
 
 for root, dir, files in os.walk(folder_path):
     for file_name in files:

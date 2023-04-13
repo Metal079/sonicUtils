@@ -45,7 +45,7 @@ train = train.shuffle(seed=123)
 test = train.shuffle(seed=42).select(range(int(train.num_rows * .8), train.num_rows))
 train = train.shuffle(seed=42).select(range(int(train.num_rows * .8)))
 
-train.features['labels'] = ClassLabel(num_classes=35, names=["Tails the fox",
+train.features['labels'] = ClassLabel(num_classes=36, names=["Tails the fox",
                                                             "Amy Rose",
                                                             "Knuckles the echidna",
                                                             "Whisper the wolf",
@@ -79,8 +79,9 @@ train.features['labels'] = ClassLabel(num_classes=35, names=["Tails the fox",
                                                             "Maria Robotnik",
                                                             "Nicole the Lynx",
                                                             "Lanolin the sheep",
-                                                            "Metal Sonic"])
-test.features['labels'] = ClassLabel(num_classes=35, names=["Tails the fox",
+                                                            "Metal Sonic",
+                                                            "Shard the metal Sonic"])
+test.features['labels'] = ClassLabel(num_classes=36, names=["Tails the fox",
                                                             "Amy Rose",
                                                             "Knuckles the echidna",
                                                             "Whisper the wolf",
@@ -114,7 +115,8 @@ test.features['labels'] = ClassLabel(num_classes=35, names=["Tails the fox",
                                                             "Maria Robotnik",
                                                             "Nicole the Lynx",
                                                             "Lanolin the sheep",
-                                                            "Metal Sonic"])
+                                                            "Metal Sonic",
+                                                            "Shard the metal Sonic"])
 
 
 model_name_or_path = 'facebook/convnext-xlarge-384-22k-1k'
@@ -167,14 +169,14 @@ model = ConvNextForImageClassification.from_pretrained(
 
 training_args = TrainingArguments(
   output_dir="./SonicCharacterClassifier",
-  per_device_train_batch_size =24,
+  per_device_train_batch_size =20,
   evaluation_strategy="epoch",
   num_train_epochs=10,
   fp16=True,
   save_steps=1,
   save_strategy="epoch",
   eval_steps=1,
-  logging_steps=200,
+  logging_steps=500,
   learning_rate=1e-4,
   save_total_limit=10,
   remove_unused_columns=False,

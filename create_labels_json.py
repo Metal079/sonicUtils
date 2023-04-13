@@ -1,7 +1,7 @@
 import os
 import json
 
-folder_path = r'/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/deviantart/Tags_labeled_archive'
+folder_path = r'/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/datasets/delta_train_set'
 
 tails_tags = ["tails_the_fox", "tailsthefox", "tailsmilesprower", "tails", "milesprower", "milestailsprower", "miles_tails_prower", "Tails the fox"]
 amy_tags = ["amyrose", "amy", "amy_rose", "amyrosethehedgehog", "Amy Rose"]
@@ -129,8 +129,8 @@ def main():
                 json_data = json.dumps(json_formated)
 
                 # Writing to json
-                with open(folder_path + '/train.json', "a") as outfile:
-                    outfile.write(json_data)
+                # with open(folder_path + '/train.json', "a") as outfile:
+                #     outfile.write(json_data)
 
     print(f"Done! tags files changed: {files_written}")
     print(character_tag_count)
