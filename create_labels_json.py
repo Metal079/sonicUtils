@@ -1,7 +1,7 @@
 import os
 import json
 
-folder_path = r'/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/datasets/delta_train_set'
+folder_path = r'/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/delta_train_set'
 
 tails_tags = ["tails_the_fox", "tailsthefox", "tailsmilesprower", "tails", "milesprower", "milestailsprower", "miles_tails_prower", "Tails the fox"]
 amy_tags = ["amyrose", "amy", "amy_rose", "amyrosethehedgehog", "Amy Rose"]
@@ -40,6 +40,29 @@ nicole_tags = ["Nicole_the_lynx", 'Nicole', 'Nicole the Holo-Lynx', 'Nicole the 
 lanolin_tags = ["Lanolin the sheep"]
 metal_sonic_tags = ["Metal Sonic"]
 shard_the_metal_Sonic = ["Shard the metal Sonic"]
+mina = ["Mina Mongoose"]
+shade = ["Shade the echidna"]
+barby_the_koala = ["Barby the koala"]
+Breezie_the_hedgehog = ["Breezie the hedgehog"]
+Clove_the_pronghorn = ["Clove the Pronghorn"]
+Fiona_fox = ["Fiona Fox"]
+Hershey_the_cat = ["Hershey the cat"]
+Jewel_the_beetle = ["Jewel the beetle"]
+Julie_su = ["Julie-Su"]
+Lara_Su = ["Lara-Su"]
+Lien_Da = ["Lien-Da"]
+Lupe_the_wolf = ["Lupe the wolf"]
+Nack_the_weasel = ["Nack the Weasel, Fang the sniper"]
+Ray_the_flying_squirrel = ["Ray the flying squirrel"]
+Rosemary_prower = ["Rosemary Prower"]
+Rosy_the_rascal = ["Rosy the rascal"]
+Sonia_the_hedgehog = ["Sonia the hedgehog"]
+zoey_the_fox = ["Zoey the fox"]
+
+
+Ratchet = ["Ratchet"]
+Clank = ["Clank"]
+rivet = ["Rivet"]
 
 all_tags = [tails_tags,
             amy_tags,
@@ -77,7 +100,28 @@ all_tags = [tails_tags,
             nicole_tags,
             lanolin_tags,
             metal_sonic_tags,
-            shard_the_metal_Sonic
+            shard_the_metal_Sonic,
+            mina,
+            shade,
+            barby_the_koala,
+            Breezie_the_hedgehog,
+            Clove_the_pronghorn,
+            Fiona_fox,
+            Hershey_the_cat,
+            Jewel_the_beetle,
+            Julie_su,
+            Lara_Su,
+            Lien_Da,
+            Lupe_the_wolf,
+            Nack_the_weasel,
+            Ray_the_flying_squirrel,
+            Rosemary_prower,
+            Rosy_the_rascal,
+            Sonia_the_hedgehog,
+            Ratchet,
+            Clank,
+            zoey_the_fox,
+            rivet
             ]
 tags_list = [list[-1] for list in all_tags] # String list of last string of all list above (for class names)
 character_tag_count = {tag:0 for tag in tags_list} # To track how many of each class is found

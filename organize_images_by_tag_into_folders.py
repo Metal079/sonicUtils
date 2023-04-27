@@ -7,7 +7,7 @@ from create_labels_json import tags_list
 search_strings = tags_list
 
 # Set the paths to the source and destination directories
-source_dir = '/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/datasets/delta_train_set'
+source_dir = '/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/datasets/charlie_train_set'
 
 # Iterate through all the files in the source directory
 for file in os.listdir(source_dir):
@@ -42,5 +42,8 @@ for file in os.listdir(source_dir):
                     os.makedirs(dest_folder)
                 
                 dest_image_path = os.path.join(dest_folder, image_file)
-                shutil.move(source_image_path, dest_image_path)
+                try:
+                    shutil.move(source_image_path, dest_image_path)
+                except:
+                    continue
                 break  # Stop checking other strings if one is found

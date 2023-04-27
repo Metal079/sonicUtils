@@ -16,19 +16,31 @@ def format_tag_file():
     return formatted_text
 
 remove_tags = {
-    "common":['furry', "animal ears", "furry female", "furry male", "sideways mouth", "animal nose", "body fur", "no humans", 'tail'],
-    "Rouge the bat":["white hair", "bat wings", "makeup", "blue eyes", "Rogue the bat", "wings"],
+    "common":['furry', "animal ears", "furry female", "furry male", "sideways mouth", "animal nose", "body fur", "no humans", 'tail', "pokemon (creature)", "body fur", "colored skin"],
+    "Rouge the bat":["white hair", "bat wings", "makeup", "blue eyes", "Rogue the bat", "wings", 'eyeshadow'],
     "Blaze the cat": ["forehead jewel", "two-tone hair", "yellow eyes", "cat ears", "cat girl", "cat tail", "purple hair"],
     "Sally Acorn": ["blue eyes", "brown hair", "red hair", "two-tone fur"],
     "Tails the fox": ["multiple tails", "two tails", "blue eyes"],
     #"Whisper the wolf": [''],
     "Honey the cat": ["black hair"],
     "Sonic the hedgehog": ["green eyes"],
-    "Amy Rose": ["green eyes", "pink fur", "pink skin"],
-    "Tangle the lemur": ["grey fur", "multicolored fur", "white fur", "blue fur"]
+    "Amy Rose": ["green eyes", "pink fur", "pink skin", "two-tone fur"],
+    "Tangle the lemur": ["grey fur", "multicolored fur", "white fur", "blue fur"],
+    "Nicole the Lynx": ["black hair", "dark skin", "dark-skinned female", "green eyes"],
+    "Mina Mongoose": ["earrings", "multiple earrings", "two-tone fur", "purple hair", "whiskers"],
+    "Metal Sonic": ["robot", "humanoid robot", "mecha"],
+    "Rosemary Prower": ["red hair", "blue eyes"],
+    "Fiona Fox": ["red hair", "red fur", "two-tone fur", "orange fur", "white fur"],
+    "zoey the fox": ["bangs", "blue eyes", "two-tone fur"],
+    "Jewel the beetle": ["wings", "blue hair", "purple eyes", "pink eyes"],
+    "Sonia the hedgehog": ["two-tone fur", ],
+    "Lupe the wolf": ["long hair", "snout", "two-tone hair", "aqua eyes", "blue eyes", "streaked hair", "multicolored hair", "grey hair", "black hair"],
+    "Clover the pronghorn": ["snout", "green hair", "antlers", "purple eyes"],
+    "Rosy the rascal": ["pink fur", "pink hair", "bangs", "two-tone fur"],
+    "Eggman": ["bald", "mustache", "fat", "facial hair", "sunglasses", "goggles", "round eyewear", "fat man"]
     }
 
-folder_path = r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/gallery-dl/aesthetic_test/charlie_train_set"
+folder_path = r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/epsilon_train_set"
 
 # Go through every txt file in given folder
 for root, dir, files in os.walk(folder_path):

@@ -107,7 +107,7 @@ def move_to_classifier():
     except:
         pass   
 
-folder = r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/deviantart/Tags_labeled_archive/metal_sonic"
+folder = r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/drive-download-20230414T215057Z-001/Jet the hawk"
 image_files = [os.path.join(folder, f) for f in os.listdir(folder) if (f.endswith('.jpg') or f.endswith('.png')  or f.endswith('.jfif'))]
 image_files = sorted(image_files)
 
