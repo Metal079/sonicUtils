@@ -2,10 +2,10 @@ import os
 from pathlib import Path
 
 # Replace the path with the folder path where your images are located
-folder_path = '/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/extra characters/Special OCs/irma the hedgehog'
+folder_path = '/home/pablo/Downloads/Scourge the hedgehog-20230516T031200Z-001/Scourge the hedgehog/Masterpiece Quality'
 
 # Replace the content of TAG variable with the desired text
-TAG = 'Irma the hedgehog'
+TAG = 'Scourge the hedgehog'
 
 def create_txt_file(image_path, tag):
     txt_path = image_path.with_suffix('.txt')

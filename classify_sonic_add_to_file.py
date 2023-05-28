@@ -34,7 +34,7 @@ class MultiClassLabel(ImageClassificationPipeline):
 folder_path = r"/home/pablo/Downloads/programming/sonic_image classifier/SonicCharacterClassifier/checkpoint-3423"
 file_paths = []
 
-for root, dirs, files in os.walk(r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/delta_train_set"):
+for root, dirs, files in os.walk(r"/home/pablo/Downloads/Sally-20230515T043854Z-001/Sally/Normal Quality"):
     for file in files:
         if file.endswith('.txt'):
             continue
@@ -58,14 +58,15 @@ for image in file_paths:
 
     for char in image_predictions[image]:
         current_text_file = os.path.splitext(image)[0] + '.txt'
-        if char['label'] == 'mobian' and char['score'] > 0.5:
+        if char['score'] > 0.7:
             with open(os.path.splitext(image)[0] + '.txt', "a") as outfile:
                 outfile.write(f" {char['label']},")
                 print(f"wrote to file: {image}")
-        elif char['score'] > 0.7:
+        elif char['label'] == 'mobian' and char['score'] > 0.5:
             with open(os.path.splitext(image)[0] + '.txt', "a") as outfile:
                 outfile.write(f" {char['label']},")
                 print(f"wrote to file: {image}")
+
 
     # Write to tag file
     '''

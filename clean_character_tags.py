@@ -31,16 +31,19 @@ remove_tags = {
     "Metal Sonic": ["robot", "humanoid robot", "mecha"],
     "Rosemary Prower": ["red hair", "blue eyes"],
     "Fiona Fox": ["red hair", "red fur", "two-tone fur", "orange fur", "white fur"],
-    "zoey the fox": ["bangs", "blue eyes", "two-tone fur"],
+    "zoey the fox": ["bangs", "blue eyes", "two-tone fur", "yellow fur", "blonde hair"],
     "Jewel the beetle": ["wings", "blue hair", "purple eyes", "pink eyes"],
     "Sonia the hedgehog": ["two-tone fur", ],
     "Lupe the wolf": ["long hair", "snout", "two-tone hair", "aqua eyes", "blue eyes", "streaked hair", "multicolored hair", "grey hair", "black hair"],
     "Clover the pronghorn": ["snout", "green hair", "antlers", "purple eyes"],
     "Rosy the rascal": ["pink fur", "pink hair", "bangs", "two-tone fur"],
-    "Eggman": ["bald", "mustache", "fat", "facial hair", "sunglasses", "goggles", "round eyewear", "fat man"]
+    "Eggman": ["bald", "mustache", "fat", "facial hair", "sunglasses", "goggles", "round eyewear", "fat man"],
+    "Shadow the hedgehog": ["red eyes"],
+    "Ray the flying squirrel": ["yellow fur"],
+    "Scourge the hedgehog": ["blue eyes", "green fur", "sharp teeth", "scar"],
     }
 
-folder_path = r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/epsilon_train_set"
+folder_path = r"/home/pablo/Downloads/Sally-20230515T043854Z-001/Sally/Normal Quality"
 
 # Go through every txt file in given folder
 for root, dir, files in os.walk(folder_path):

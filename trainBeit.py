@@ -80,7 +80,10 @@ train.features['labels'] = ClassLabel(num_classes=36, names=["Tails the fox",
                                                             "Nicole the Lynx",
                                                             "Lanolin the sheep",
                                                             "Metal Sonic",
-                                                            "Shard the metal Sonic"])
+                                                            "Shard the metal Sonic",
+                                                            "Mina Mongoose",
+                                                            
+                                                            ])
 test.features['labels'] = ClassLabel(num_classes=36, names=["Tails the fox",
                                                             "Amy Rose",
                                                             "Knuckles the echidna",

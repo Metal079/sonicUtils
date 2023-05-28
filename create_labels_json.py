@@ -1,7 +1,7 @@
 import os
 import json
 
-folder_path = r'/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/delta_train_set'
+folder_path = r'/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/sonic_training/deviantart/Tags_labeled_archive'
 
 tails_tags = ["tails_the_fox", "tailsthefox", "tailsmilesprower", "tails", "milesprower", "milestailsprower", "miles_tails_prower", "Tails the fox"]
 amy_tags = ["amyrose", "amy", "amy_rose", "amyrosethehedgehog", "Amy Rose"]
@@ -58,6 +58,7 @@ Rosemary_prower = ["Rosemary Prower"]
 Rosy_the_rascal = ["Rosy the rascal"]
 Sonia_the_hedgehog = ["Sonia the hedgehog"]
 zoey_the_fox = ["Zoey the fox"]
+Scourge_the_hedgehog = ["Scourge the hedgehog"]
 
 
 Ratchet = ["Ratchet"]
@@ -121,7 +122,8 @@ all_tags = [tails_tags,
             Ratchet,
             Clank,
             zoey_the_fox,
-            rivet
+            rivet,
+            Scourge_the_hedgehog
             ]
 tags_list = [list[-1] for list in all_tags] # String list of last string of all list above (for class names)
 character_tag_count = {tag:0 for tag in tags_list} # To track how many of each class is found
@@ -173,8 +175,8 @@ def main():
                 json_data = json.dumps(json_formated)
 
                 # Writing to json
-                # with open(folder_path + '/train.json', "a") as outfile:
-                #     outfile.write(json_data)
+                with open(folder_path + '/train.json', "a") as outfile:
+                    outfile.write(json_data)
 
     print(f"Done! tags files changed: {files_written}")
     print(character_tag_count)
