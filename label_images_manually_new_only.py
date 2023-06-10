@@ -115,7 +115,7 @@ def image_has_no_tags(image_path):
         content = file.read()
         return len(content.strip()) == 0
 
-folder = r"/media/pablo/6ED0B21ED0B1EC89/Users/metal/Downloads/beta3Images/Zoey the Fox"
+folder = r"C:\Users\metal\Downloads\sonic_training\datasets\gamma_train_set"
 image_files = [os.path.join(folder, f) for f in os.listdir(folder) if (f.endswith('.jpg') or f.endswith('.png')  or f.endswith('.jfif'))]
 image_files = sorted(image_files)
 

@@ -21,5 +21,5 @@ def delete_txt_without_corresponding_image(folder_path):
             print(f"Deleted: {txt_file}")
 
 if __name__ == "__main__":
-    folder_path = r"C:\Users\metal\Downloads\sonic_training\epsilon_train_set_cleaned"
+    folder_path = r"C:\Users\metal\Downloads\sonic_training\datasets\gamma_train_set"
     delete_txt_without_corresponding_image(folder_path)

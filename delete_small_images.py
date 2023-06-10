@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # specify the path to the folder containing the images
-folder_path = r"C:\Users\metal\gallery-dl\aesthetic_test\charlie_train_set"
+folder_path = r"C:\Users\metal\Downloads\sonic_training\datasets\gamma_train_set"
 
 # loop through all files in the folder
 counter = 0
@@ -15,7 +15,7 @@ for filename in os.listdir(folder_path):
         width, height = img.size
         img.close()
         # check if the image is smaller than 512 in either dimension
-        if width < 768 or height < 768:
+        if width < 512 or height < 512:
             # delete the image file
             image_path = os.path.join(folder_path, filename)
             os.remove(image_path)

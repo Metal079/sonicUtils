@@ -16,7 +16,7 @@ def format_tag_file():
     return formatted_text
 
 remove_tags = {
-    "common":['furry', "animal ears", "furry female", "furry male", "sideways mouth", "animal nose", "body fur", "no humans", 'tail', "pokemon (creature)", "body fur", "colored skin"],
+    "common":['furry', "animal ears", "furry female", "furry male", "sideways mouth", "animal nose", "body fur", "no humans", 'tail', "pokemon (creature)", "body fur", "colored skin", "solo"],
     "Rouge the bat":["white hair", "bat wings", "makeup", "blue eyes", "Rogue the bat", "wings", 'eyeshadow'],
     "Blaze the cat": ["forehead jewel", "two-tone hair", "yellow eyes", "cat ears", "cat girl", "cat tail", "purple hair"],
     "Sally Acorn": ["blue eyes", "brown hair", "red hair", "two-tone fur"],
@@ -35,15 +35,19 @@ remove_tags = {
     "Jewel the beetle": ["wings", "blue hair", "purple eyes", "pink eyes"],
     "Sonia the hedgehog": ["two-tone fur", ],
     "Lupe the wolf": ["long hair", "snout", "two-tone hair", "aqua eyes", "blue eyes", "streaked hair", "multicolored hair", "grey hair", "black hair"],
-    "Clover the pronghorn": ["snout", "green hair", "antlers", "purple eyes"],
+    "Clove the pronghorn": ["snout", "green hair", "antlers", "purple eyes"],
     "Rosy the rascal": ["pink fur", "pink hair", "bangs", "two-tone fur"],
+    "eggman": ["bald", "mustache", "fat", "facial hair", "sunglasses", "goggles", "round eyewear", "fat man"],
     "Eggman": ["bald", "mustache", "fat", "facial hair", "sunglasses", "goggles", "round eyewear", "fat man"],
     "Shadow the hedgehog": ["red eyes"],
     "Ray the flying squirrel": ["yellow fur"],
     "Scourge the hedgehog": ["blue eyes", "green fur", "sharp teeth", "scar"],
+    "Espio the chameleon": ["yellow eyes", "purple skin", "purple pants", "horn", "horns", "cat tail", "pink hair"],
+    "Zeta the echidna": ['white hair', 'blue eyes', 'grey hair'],
+    "Sage": ["white hair", "red eyes"],
     }
 
-folder_path = r"/home/pablo/Downloads/Sally-20230515T043854Z-001/Sally/Normal Quality"
+folder_path = r"C:\Users\metal\Downloads\sonic_training\datasets\gamma_train_set"
 
 # Go through every txt file in given folder
 for root, dir, files in os.walk(folder_path):
@@ -63,9 +67,10 @@ for root, dir, files in os.walk(folder_path):
             for tag in txt:
                 for character in found_tags:
                     try:
-                        if tag in remove_tags[character]:
+                        # Convert both sides to lowercase for case-insensitive comparison
+                        if tag.lower() in [rt.lower() for rt in remove_tags[character]]:
                             cleaned_text.remove(tag)
-                            if tag == "Rogue the bat":
+                            if tag.lower() == "rogue the bat":
                                 cleaned_text.append("Rouge the bat")
                     except:
                         #print(f"Didnt find {character} in remove_tags")
